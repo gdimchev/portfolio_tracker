@@ -1,2 +1,3 @@
 pandas==1.4.2
 yfinance==0.1.70
+pyaml==21.10.1

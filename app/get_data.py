@@ -1,10 +1,12 @@
 import yfinance as yf
 import pandas as pd
 import datetime
+from misc.read_json import read_yaml
 
-eft_assets = ["XAIX.MI", "DBXK.DE", "IQQH.DE", "PJAT.F", "D2WA.MU", "0P00001BIC.F", "0P00000PM7.F"]
-comm_assets = ["GC=F"]
-crypto_assets = ["URUS-USD", "AU-USD"]
+config = read_yaml(file=r'/Users/dimchev/PycharmProjects/portfolio_tracker/config/config.yml')
+eft_assets = config['assets']['eft_assets']
+comm_assets = config['assets']['comm_assets']
+crypto_assets = config['assets']['crypto_assets']
 
 assets = {"eft": eft_assets, "gold": comm_assets, "crypto": crypto_assets}
 
